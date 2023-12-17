@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 public class HititController {
 
     private final PictureService pictureService;
@@ -32,6 +33,7 @@ public class HititController {
     public List<String> getAllPicturesUrl(){
         return pictureService.getAllPicturesUrl();
     }
+
     @GetMapping("/picture/{id}/url")
     public String getAllPicturesUrl(@PathVariable(value = "id") Long pictureId){
         return pictureService.getPictureUrlById(pictureId);
