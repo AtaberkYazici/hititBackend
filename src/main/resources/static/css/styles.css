@@ -1,0 +1,72 @@
+#container-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #0a0a0a;
+    z-index: 1;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    user-select: none;
+}
+
+/* Chrome, Safari and Opera */
+#container-image::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+
+}
+#container-image::-webkit-scrollbar-thumb {
+    background: #a8e0eb; /* Kaydırma çubuğu rengi */
+}
+.point {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgb(5, 249, 249);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#coordinates {
+    margin-top: 10px;
+}
+.image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    transition: transform 0.1s; /* Zoom efekti için geçiş süresi */
+    transform-origin: 0 0; /* zoomu sol üst köşeden başlattım */
+}
+
+.middle{
+    padding: 40px;
+}
+.input{
+    padding: 10px;
+}
+.input-container{
+    width: 350px;
+}
+.button-container{
+    width: 120px;
+}
+#successAlert {
+    display: none; /* Başlangıçta gizli */
+}
+#syllables-container {
+    max-height: 300px; /* Belirli bir maksimum yükseklik ayarlayın */
+    max-width: 300px;
+    overflow-x: scroll; /* Dikey kaydırma çubuğunu etkinleştir */
+}
+.accent-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.accent-cell {
+    border: 1px solid #000;
+    padding: 8px;
+    cursor: pointer;
+}
